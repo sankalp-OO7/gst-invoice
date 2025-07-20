@@ -51,8 +51,8 @@ export const BillTemplate: React.FC<Props> = ({ bill }) => {
               <TableCell>{index + 1}</TableCell>
               <TableCell>{item.name}</TableCell>
               <TableCell>{item.quantity}</TableCell>
-              <TableCell>${item.price}</TableCell>
-              <TableCell>${item.total}</TableCell>
+              <TableCell>₹{item.price}</TableCell>
+              <TableCell>₹{item.total}</TableCell>
             </TableRow>
           ))}
           <TableRow>
@@ -60,7 +60,7 @@ export const BillTemplate: React.FC<Props> = ({ bill }) => {
               GRAND TOTAL
             </TableCell>
             <TableCell sx={{ fontWeight: "bold" }}>
-              ${bill?.totalAmount}
+            ₹{bill?.totalAmount}
             </TableCell>
           </TableRow>
         </TableBody>
